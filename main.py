@@ -4,8 +4,8 @@ import time
  
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-wlan.connect("realme narzo 60 Pro 5G","eswareswar")
-openweather_api_key = "afb0a11f91fd46dfb3e91f78afffef48"
+wlan.connect("m","12345678")
+openweather_api_key = "c906eeb4d663518919103e81afbbc9a0"
   
 wait = 10
 while wait > 0:
@@ -122,7 +122,7 @@ while True:
     lcd.clear() 
     time.sleep_ms(200)
    
-    string = f'{hours if hours != 0 else 12:02d}:{mins:02d} {period} - {weather_data["name"]}\n'
+    string = f'{hours if hours != 0 else 12:02d}:{mins:02d} {period}   {weather}\n'
     lcd.message(string)
     string = f'{t}{TEMPERATURE_UNITS[units]} {rh}%rh'
     lcd.message(string)
